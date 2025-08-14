@@ -3,14 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Los mejores videos de Hora de Aventura - momentos memorables de Finn, Jake y todos los habitantes de Ooo">
     <title>Videos | Hora de Aventura</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         /* Estilos específicos para la página de videos */
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #FFEBCD;
+            color: #5D4037;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color: #8BC34A;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        
+        h1 {
+            color: white;
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #FFEB3B;
+        }
+        
         .video-section {
             max-width: 1200px;
             margin: 2rem auto;
             padding: 0 1.5rem;
+        }
+        
+        .video-section h2 {
+            color: #8BC34A;
+            font-size: 2rem;
+            border-bottom: 2px solid #8BC34A;
+            padding-bottom: 0.5rem;
         }
         
         .video-grid {
@@ -55,16 +105,35 @@
         .video-info h3 {
             color: #5D4037;
             margin-top: 0;
+            font-size: 1.3rem;
         }
         
         .video-info p {
             color: #5D4037;
             opacity: 0.9;
+            line-height: 1.5;
+        }
+        
+        footer {
+            background-color: #8BC34A;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
         }
         
         @media (max-width: 768px) {
             .video-grid {
                 grid-template-columns: 1fr;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
             }
         }
     </style>
@@ -95,25 +164,25 @@
                         <iframe src="https://www.youtube.com/embed/9BG4eNRqWRE" 
                                 title="I Remember You - Hora de Aventura" 
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                allowfullscreen></iframe>
+                                allowfullscreen loading="lazy"></iframe>
                     </div>
                     <div class="video-info">
                         <h3>"I Remember You"</h3>
-                        <p>La emotiva canción entre Marceline y el Rey Helado que revela su pasado juntos (Temporada 4).</p>
+                        <p>La emotiva canción entre Marceline y el Rey Helado que revela su pasado juntos (Temporada 4). Uno de los momentos más conmovedores de la serie.</p>
                     </div>
                 </div>
                 
                 <!-- Video 2 -->
                 <div class="video-card">
                     <div class="video-container">
-                        <iframe src="https://www.youtube.com/watch?v=CTim9UGlMLs" 
+                        <iframe src="https://www.youtube.com/embed/CTim9UGlMLs" 
                                 title="Simon Y Marcy" 
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                allowfullscreen></iframe>
+                                allowfullscreen loading="lazy"></iframe>
                     </div>
                     <div class="video-info">
                         <h3>Simon & Marcy</h3>
-                        <p>Simon afectado por la corona cuidando a Marceline (Temporada 5).</p>
+                        <p>La historia de cómo Simon Petrikov cuidó a una joven Marceline después del apocalipsis Mushroom War (Temporada 5). Muestra los orígenes trágicos de estos personajes.</p>
                     </div>
                 </div>
                 
@@ -123,16 +192,34 @@
                         <iframe src="https://www.youtube.com/embed/OzGfFgqIk7M" 
                                 title="Documental Hora de Aventura" 
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                allowfullscreen></iframe>
+                                allowfullscreen loading="lazy"></iframe>
                     </div>
                     <div class="video-info">
                         <h3>Documental Oficial</h3>
-                        <p>"The Making of Adventure Time" - Detrás de escenas de la serie.</p>
+                        <p>"The Making of Adventure Time" - Un fascinante detrás de escenas que muestra cómo se creó esta innovadora serie animada.</p>
+                    </div>
+                </div>
+                
+                <!-- Video 4 -->
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/0DxmJZRl7X4" 
+                                title="Time Adventure - Hora de Aventura Finale" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3>"Time Adventure" (Finale)</h3>
+                        <p>La hermosa canción final de Rebecca Sugar que cierra la serie de manera perfecta (Temporada 10). Un tributo a los personajes y sus aventuras.</p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+    
+    <footer>
+        <p>© 2023 Hora de Aventura Fan Site. Todos los derechos reservados a Cartoon Network.</p>
+        <p>Sitio creado por fans, sin afán de lucro.</p>
+    </footer>
 </body>
-
 </html>
