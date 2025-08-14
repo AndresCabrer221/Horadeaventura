@@ -5,26 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Videos de Hora de Aventura</title>
     <style>
+       :root {
+            --color-piel: #FFE4C4;  /* Color piel */
+            --color-cafe-claro: #D2B48C;  /* Café claro */
+            --color-cafe-medio: #A0522D;  /* Café medio */
+            --color-cafe-oscuro: #5D4037;  /* Café oscuro */
+            --color-accento: #BC8F8F;  /* Café rosáceo */
+        }
+        
         body {
             font-family: 'Comic Sans MS', cursive, sans-serif;
-            background-color: #FFF5E0; /* Fondo beige claro */
+            background-color: var(--color-piel);
+            color: var(--color-cafe-oscuro);
             margin: 0;
             padding: 0;
-            color: #5D4037; /* Color texto principal marrón oscuro */
+            line-height: 1.6;
         }
         
         header {
-            background-color: #FFAA5C; /* Naranja pastel como Finn */
+            background: linear-gradient(to right, var(--color-cafe-medio), var(--color-cafe-oscuro));
             padding: 1.5rem;
             text-align: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
         
         h1 {
-            color: #FFF; /* Texto blanco */
+            color: var(--color-piel);
             margin: 0;
             font-size: 2.5rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
         
         nav ul {
@@ -32,58 +41,64 @@
             padding: 0;
             display: flex;
             justify-content: center;
-            gap: 1.5rem;
-            margin-top: 1rem;
+            gap: 1rem;
+            margin-top: 1.5rem;
         }
         
         nav a {
-            color: #FFF;
+            color: var(--color-piel);
             text-decoration: none;
             font-weight: bold;
-            font-size: 1.1rem;
-            transition: color 0.3s;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            background-color: rgba(255,255,255,0.2);
+            padding: 0.5rem 1.2rem;
+            border-radius: 25px;
+            background-color: var(--color-cafe-medio);
+            transition: all 0.3s ease;
         }
         
         nav a:hover {
-            background-color: rgba(255,255,255,0.3);
-            color: #FFEE58; /* Amarillo pastel */
+            background-color: var(--color-cafe-oscuro);
+            transform: translateY(-2px);
         }
         
         .video-section {
             max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 1.5rem;
+            margin: 3rem auto;
+            padding: 0 2rem;
         }
         
         .video-section h2 {
-            color: #FF7043; /* Naranja más intenso */
+            color: var(--color-cafe-oscuro);
             font-size: 2rem;
-            border-bottom: 3px dotted #FFAA5C;
-            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--color-cafe-claro);
+            padding-bottom: 0.8rem;
+            margin-bottom: 2rem;
+        }
+        
+        .video-section p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            text-align: center;
         }
         
         .video-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
         }
         
         .video-card {
-            background: #FFF;
-            border-radius: 12px;
+            background: white;
+            border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-            border: 2px solid #FFD180; /* Borde naranja claro */
+            box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid var(--color-cafe-claro);
         }
         
         .video-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
         }
         
         .video-container {
@@ -91,7 +106,7 @@
             padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
-            background: #000;
+            background: black;
         }
         
         .video-container iframe {
@@ -105,33 +120,41 @@
         
         .video-info {
             padding: 1.5rem;
-            background: linear-gradient(to bottom, #FFF, #FFECB3); /* Degradado amarillo claro */
+            background: white;
         }
         
         .video-info h3 {
-            color: #5D4037;
+            color: var(--color-cafe-oscuro);
             margin-top: 0;
             font-size: 1.4rem;
+            border-bottom: 1px dashed var(--color-cafe-claro);
+            padding-bottom: 0.5rem;
         }
         
         .video-info p {
-            color: #5D4037;
+            color: var(--color-cafe-oscuro);
             opacity: 0.9;
-            line-height: 1.6;
+            text-align: left;
+            margin: 1rem 0 0;
         }
         
         footer {
-            background-color: #5D4037; /* Marrón oscuro */
-            color: #FFD180;
+            background: var(--color-cafe-oscuro);
+            color: var(--color-piel);
             text-align: center;
             padding: 2rem;
-            margin-top: 3rem;
-            font-size: 0.9rem;
+            margin-top: 4rem;
+            font-size: 0.95rem;
+        }
+        
+        footer p {
+            margin: 0.5rem 0;
         }
         
         @media (max-width: 768px) {
             .video-grid {
                 grid-template-columns: 1fr;
+                gap: 2rem;
             }
             
             nav ul {
@@ -203,4 +226,5 @@
     </footer>
 </body>
 </html>
+
 
