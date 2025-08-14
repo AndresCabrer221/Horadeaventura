@@ -3,54 +3,71 @@ body {
     font-family: 'Comic Sans MS', cursive, sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
-    background: #f0f8ff url('imagen5.jpg') no-repeat center center fixed;
+    color: #5D4037; /* Texto café oscuro para mejor contraste */
+    background: #F5F5DC url('imagen5.jpg') no-repeat center center fixed; /* Fondo beige */
     background-size: cover;
-    min-height: 100vh;    
+    min-height: 100vh;
 }
 
 header {
-    background-color: #ff69b4;
-    color: white;
-    padding: 1rem;
+    background-color: #D2B48C; /* Café claro */
+    color: #5D4037; /* Texto café oscuro */
+    padding: 1.5rem;
     text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 nav ul {
     list-style-type: none;
-    padding: 0;
+    padding: 0.8rem 0;
     display: flex;
     justify-content: center;
-    background-color: #66CDAA;
+    background-color: #A0522D; /* Café medio */
+    margin: 0;
+    border-top: 3px solid #8B4513; /* Borde café oscuro */
+    border-bottom: 3px solid #8B4513;
 }
 
 nav li {
-    margin: 0 1rem;
+    margin: 0 1.5rem;
 }
 
 nav a {
-    color: white;
+    color: #FFF8DC; /* Beige claro */
     text-decoration: none;
     font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #8B4513; /* Café oscuro al hover */
+    color: white;
+    transform: translateY(-2px);
 }
 
 main {
     padding: 2rem;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto 100px; /* Espacio para el footer */
+    background-color: rgba(255, 255, 255, 0.85); /* Fondo semi-transparente */
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
 }
 
 footer {
-    background-color: #333;
-    color: white;
+    background-color: #5D4037; /* Café oscuro */
+    color: #FFF8DC; /* Texto beige */
     text-align: center;
-    padding: 1rem;
+    padding: 1.2rem;
     position: fixed;
     bottom: 0;
     width: 100%;
+    border-top: 3px solid #A0522D;
 }
 
-/* Estilos específicos para personajes */
+/* Estilos para personajes */
 .personajes-principales, .personajes-secundarios {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -59,28 +76,45 @@ footer {
 }
 
 .personaje {
-    background-color: white;
+    background-color: #FFF8DC; /* Fondo beige claro */
     border-radius: 10px;
-    padding: 1rem;
+    padding: 1.5rem;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    
+    border: 2px solid #D2B48C; /* Borde café claro */
+    transition: transform 0.3s ease;
+}
+
+.personaje:hover {
+    transform: translateY(-5px);
 }
 
 .personaje img {
-    max-width: 100%;
-    border-radius: 5px;
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
     display: block;
     margin: 0 auto 1rem;
+    border: 3px solid #A0522D;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
+        align-items: center;
+    }
+    
+    nav li {
+        margin: 0.5rem 0;
     }
     
     .personajes-principales, .personajes-secundarios {
         grid-template-columns: 1fr;
     }
     
+    main {
+        margin-bottom: 120px;
+        padding: 1rem;
+    }
 }
