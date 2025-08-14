@@ -19,25 +19,25 @@ header {
 
 nav ul {
     list-style-type: none;
-    padding: 0.8rem 0;
+    padding: 0.2rem 0;
     display: flex;
     justify-content: center;
     background-color: #A0522D; /* Café medio */
     margin: 0;
-    border-top: 3px solid #8B4513; /* Borde café oscuro */
-    border-bottom: 3px solid #8B4513;
+    border-top: 1px solid #8B4513; /* Borde café oscuro */
+    border-bottom: 1px solid #8B4513;
 }
 
 nav li {
-    margin: 0 1.5rem;
+    margin: 0 0.5rem;
 }
 
 nav a {
     color: #FFF8DC; /* Beige claro */
     text-decoration: none;
     font-weight: bold;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
     transition: all 0.3s ease;
 }
 
