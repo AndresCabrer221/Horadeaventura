@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos | Hora de Aventura</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos específicos para la página de videos */
+        .video-section {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+        
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .video-card {
+            background: #FFF8DC;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .video-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .video-info {
+            padding: 1.2rem;
+        }
+        
+        .video-info h3 {
+            color: #5D4037;
+            margin-top: 0;
+        }
+        
+        .video-info p {
+            color: #5D4037;
+            opacity: 0.9;
+        }
+        
+        @media (max-width: 768px) {
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Videos de Hora de Aventura</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="historia.html">Historia</a></li>
+                <li><a href="personajes.html">Personajes</a></li>
+                <li><a href="produccion.html">Producción</a></li>
+                <li><a href="videos.html">Videos</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="video-section">
+            <h2>Los mejores momentos de la serie</h2>
+            <p>Revive las escenas más memorables de Finn, Jake y todos los habitantes de Ooo.</p>
+            
+            <div class="video-grid">
+                <!-- Video 1 -->
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/9BG4eNRqWRE" 
+                                title="I Remember You - Hora de Aventura" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3>"I Remember You"</h3>
+                        <p>La emotiva canción entre Marceline y el Rey Helado que revela su pasado juntos (Temporada 4).</p>
+                    </div>
+                </div>
+                
+                <!-- Video 2 -->
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/0DlmjYlqsdI" 
+                                title="Final de Hora de Aventura" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3>Final de la serie</h3>
+                        <p>El épico final "Come Along With Me" donde enfrentan a Golb (Temporada 10).</p>
+                    </div>
+                </div>
+                
+                <!-- Video 3 -->
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/OzGfFgqIk7M" 
+                                title="Documental Hora de Aventura" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3>Documental Oficial</h3>
+                        <p>"The Making of Adventure Time" - Detrás de escenas de la serie.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>© 2023 Fan Page de Hora de Aventura. Todos los derechos reservados a Cartoon Network.</p>
+        <p class="disclaimer">Hora de Aventura es una marca registrada de Cartoon Network Studios/Warner Bros. Discovery</p>
+    </footer>
+</body>
+</html>
