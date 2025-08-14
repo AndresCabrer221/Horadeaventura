@@ -3,30 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Los mejores videos de Hora de Aventura - momentos memorables de Finn, Jake y todos los habitantes de Ooo">
-    <title>Videos | Hora de Aventura</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Videos de Hora de Aventura</title>
     <style>
-        /* Estilos específicos para la página de videos */
         body {
             font-family: 'Comic Sans MS', cursive, sans-serif;
-            background-color: #FFEBCD;
-            color: #5D4037;
+            background-color: #FFF5E0; /* Fondo beige claro */
             margin: 0;
             padding: 0;
+            color: #5D4037; /* Color texto principal marrón oscuro */
         }
         
         header {
-            background-color: #8BC34A;
+            background-color: #FFAA5C; /* Naranja pastel como Finn */
             padding: 1.5rem;
             text-align: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
         
         h1 {
-            color: white;
+            color: #FFF; /* Texto blanco */
             margin: 0;
             font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
         }
         
         nav ul {
@@ -39,15 +37,19 @@
         }
         
         nav a {
-            color: white;
+            color: #FFF;
             text-decoration: none;
             font-weight: bold;
             font-size: 1.1rem;
             transition: color 0.3s;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            background-color: rgba(255,255,255,0.2);
         }
         
         nav a:hover {
-            color: #FFEB3B;
+            background-color: rgba(255,255,255,0.3);
+            color: #FFEE58; /* Amarillo pastel */
         }
         
         .video-section {
@@ -57,9 +59,9 @@
         }
         
         .video-section h2 {
-            color: #8BC34A;
+            color: #FF7043; /* Naranja más intenso */
             font-size: 2rem;
-            border-bottom: 2px solid #8BC34A;
+            border-bottom: 3px dotted #FFAA5C;
             padding-bottom: 0.5rem;
         }
         
@@ -71,22 +73,25 @@
         }
         
         .video-card {
-            background: #FFF8DC;
-            border-radius: 8px;
+            background: #FFF;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border: 2px solid #FFD180; /* Borde naranja claro */
         }
         
         .video-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-8px);
+            box-shadow: 0 12px 20px rgba(0,0,0,0.15);
         }
         
         .video-container {
             position: relative;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
+            background: #000;
         }
         
         .video-container iframe {
@@ -99,27 +104,29 @@
         }
         
         .video-info {
-            padding: 1.2rem;
+            padding: 1.5rem;
+            background: linear-gradient(to bottom, #FFF, #FFECB3); /* Degradado amarillo claro */
         }
         
         .video-info h3 {
             color: #5D4037;
             margin-top: 0;
-            font-size: 1.3rem;
+            font-size: 1.4rem;
         }
         
         .video-info p {
             color: #5D4037;
             opacity: 0.9;
-            line-height: 1.5;
+            line-height: 1.6;
         }
         
         footer {
-            background-color: #8BC34A;
-            color: white;
+            background-color: #5D4037; /* Marrón oscuro */
+            color: #FFD180;
             text-align: center;
-            padding: 1.5rem;
-            margin-top: 2rem;
+            padding: 2rem;
+            margin-top: 3rem;
+            font-size: 0.9rem;
         }
         
         @media (max-width: 768px) {
@@ -128,8 +135,7 @@
             }
             
             nav ul {
-                flex-direction: column;
-                gap: 0.5rem;
+                flex-wrap: wrap;
             }
             
             h1 {
@@ -156,35 +162,70 @@
         <section class="video-section">
             <h2>Los mejores momentos de la serie</h2>
             <p>Revive las escenas más memorables de Finn, Jake y todos los habitantes de Ooo.</p>
-             <div class="video-grid">
-        <!-- Video 1: Simon & Marcy -->
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/CTim9UGlMLs" 
-                    title="Simon y Marcy - Hora de Aventura" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen></iframe>
-        </div>
-        
-        <!-- Video 2: Come Along With Me -->
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/kpz5xI58Sg0" 
-                    title="Final de Hora de Aventura - Come Along With Me" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen></iframe>
-        </div>
-    </div>
+            
+            <div class="video-grid">
+                <!-- Video 1 -->
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/CTim9UGlMLs" 
+                                title="Simon y Marcy - Hora de Aventura" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen loading="lazy"></iframe>
+                    </div>
                     <div class="video-info">
                         <h3>Simon & Marcy</h3>
-                        <p>La historia de cómo Simon Petrikov cuidó a una joven Marceline después del apocalipsis Mushroom War (Temporada 5). Muestra los orígenes trágicos de estos personajes.</p>
+                        <p>La conmovedora historia del pasado de Marceline y Simon Petrikov (antes de convertirse en el Rey Helado) durante el apocalipsis Mushroom War.</p>
+                    </div>
+                </div>
+                
+                <!-- Video 2 -->
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/kpz5xI58Sg0" 
+                                title="Final de Hora de Aventura - Come Along With Me" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3>Final de la serie</h3>
+                        <p>El emotivo episodio final "Come Along With Me" que cierra la serie después de 10 temporadas de aventuras.</p>
                     </div>
                 </div>
                 
                 <!-- Video 3 -->
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/9BG4eNRqWRE" 
+                                title="I Remember You - Hora de Aventura" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3>"I Remember You"</h3>
+                        <p>El icónico dueto musical entre Marceline y el Rey Helado que revela su conexión pasada.</p>
+                    </div>
+                </div>
                 
+                <!-- Video 4 -->
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/0DxmJZRl7X4" 
+                                title="Time Adventure - Hora de Aventura" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3>"Time Adventure"</h3>
+                        <p>La hermosa canción de Rebecca Sugar sobre la naturaleza del tiempo y los recuerdos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>© 2023 Hora de Aventura Fan Site. No afiliado a Cartoon Network.</p>
+        <p>Todos los derechos de los videos pertenecen a sus creadores originales.</p>
     </footer>
 </body>
 </html>
-
-
